@@ -1,0 +1,29 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.db
+*.sqlite3
+*.log
+
+# --- Virtual environment ---
+venv/
+env/
+.venv/
+ENV/
+
+# --- Streamlit cache ---
+.streamlit/
+
+# --- VSCode ---
+.vscode/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- PDF temp files ---
+*.pdf.tmp
+*.bak
