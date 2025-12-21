@@ -233,7 +233,11 @@ def parse_whatsapp_text(raw_text):
 
 st.subheader("Pegá el texto del WhatsApp:")
 
-raw = st.text_area("Texto original", height=250)
+# Texto fijo por defecto (incluye los 2 saltos de línea al comienzo y las comillas simples tal cual)
+_default_raw = "\n\nDatos de la Reserva\n • Check-in: 01/01/2026\n • Check-out: 01/01/2026\n • Cantidad de noches: 3\n • Cantidad de personas: 2\n • Habitación: 1\n • Pensión:  Media pensión\n\nDetalles del Pago\n • Total de la estadía: $\n • Seña recibida (50%): $\n • Saldo restante a abonar en el check-in: "
+
+# Se puede modificar manualmente en el text_area
+raw = st.text_area("Texto original", value=_default_raw, height=250)
 parsed = parse_whatsapp_text(raw)
 
 # --- Nuevo: sincronizar session_state cuando cambia el texto pegado ---
